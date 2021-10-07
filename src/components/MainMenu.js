@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+import { MainMenuContainer } from "../styles/MainMenoContainer";
+
 export const MainMenu = () => (
-    <nav>
+    <MainMenuContainer>
         <ul>
-            <li>Home</li>
-            <li>Sobre</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/sobre" >Sobre</Link></li>
         </ul>
-    </nav>
+    </MainMenuContainer>
 );

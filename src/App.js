@@ -1,15 +1,32 @@
 import { Header } from './components/Header';
-import { MoviesList } from './components/MoviesList';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { Home } from './view/Home';
+import { About } from './view/About';
+
 
 function App() {
+
   return (
     <div className="App">
-      <Header />
+     
 
-      <section>
-        <MoviesList movies={[]} />
-      </section>
-
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/sobre">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+      
     </div>
   );
 }
