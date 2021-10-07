@@ -4,7 +4,7 @@ export const MoviesList = ({ movies }) => (
 
     <section>
         <ul>
-            {movies.map(m => <MovieItem title={m.title} />)}
+            {movies.map(m => <MovieItem movie={m} />)}
         </ul>
     </section>
 
